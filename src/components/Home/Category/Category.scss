@@ -1,0 +1,66 @@
+@import "../../../css-config/mixins.scss";
+
+
+.shop-by-category{
+   
+    margin: 25px 0;
+    @include md{
+        margin: 50px 0;
+    }
+
+    .categories{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 20px;
+       @include md{
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: center;
+        gap: 60px 20px;
+       }
+        .category{
+            background-color:rgb(235, 221, 195);
+            /*rgb(242, 225, 194);*/
+            width: calc(100% - 5px);
+           padding: 20px;
+           border-radius: 20px;
+            cursor: pointer;
+            overflow: hidden; display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            @include md{
+                width: calc(20% - 10px);
+                
+            }
+            img{
+                width: 80%;
+               
+                height: 200px;
+                display: block;
+                transition:  all ease 0.3s;
+                background-size: cover;
+            }
+            h2{
+                background: rgb(235, 221, 195);
+                margin-top: 10px;
+                color: black;
+                font-size: 1.2em;
+                text-align: center;
+
+            }
+            &:hover{
+                img{
+                    transform: scale(0.8);
+                }
+                h2{
+                    color: #822de2;
+                   /* color: rgb(118, 188, 118);*/
+                }
+              
+            }
+        }
+    }
+}

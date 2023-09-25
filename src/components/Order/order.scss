@@ -1,0 +1,79 @@
+@import "../../css-config/mixins.scss";
+/* Order.scss */
+
+.order-page {
+    display: flex;
+    flex-direction: column;
+    /* Arrange sections in a row (left and right) */
+    @include md{
+        display: flex;
+        flex-direction: row; 
+    }
+}
+
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+ 
+    flex: 1; /* Make the cart section take up available space */
+    padding: 20px; /* Add padding for spacing */
+  /* Set a background color for the cart section */
+    border-right: 1px solid #ccc; /* Add a border to separate the sections */
+
+    .subtotal{
+        text-align: center;
+        font-weight: bolder;
+        .total{
+            color:#8e2de2;
+        }
+    }
+}   
+
+.form-section {
+    flex: 1; /* Make the form section take up available space */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Add styles for form groups, labels, and inputs */
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.checkout-cta {
+    background-color: #96a586;
+   /* background-color: #36134a;*/
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.checkout-cta:hover {
+    background-color: #697056;
+   /* background-color: #0056b3;*/
+}
+.disabled{
+    background-color: red;
+}
+.disabled:hover{
+    background-color: rgb(49, 8, 8);
+}

@@ -1,0 +1,124 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+    padding: 40px 0;
+    position: relative;
+
+    background-image: linear-gradient((to right,rgb(157, 221, 236), wheat, rgb(87, 73, 53)));
+    background-image: linear-gradient((to right,rgb(157, 221, 236), white, rgb(87, 73, 53)));
+    background-image: linear-gradient((to right,rgb(72, 64, 50), rgb(230, 224, 216)));
+    background-image: linear-gradient((to left,#e7e2d9,#afa587, #697257,rgb(72, 64, 50),));
+    /*rgb(162, 214, 162)
+        background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+        */
+    @include md {
+        height: calc(100vh - 80px);
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        position: relative;
+        @include md {
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .banner-img {
+            position: relative;
+            z-index: 9;
+            width: 400px;
+            margin-bottom: 20px;
+            @include md {
+                width: 600px;
+               
+                margin-top: 50px;
+                margin-bottom: 0;
+       
+                /* margin-right: 60px;*/
+            }
+            @include xxl {
+                width: 600px;
+                margin-right: 0;
+                margin-top: 0;
+            }
+
+            &:hover{
+                transform: scale(1.1)
+                /*transform: translate(10%);*/
+            }
+        }
+        .text-content {
+            color: #e7e2d9;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            @include md {
+                position: absolute;
+                /*left: 50px;*/
+                width: 40%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include xxl {
+                left: 0;
+            }
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 1;
+                color:  #e7e2d9;
+                
+                /*
+                color: rgb(154, 195, 154);
+                color: #a5af98;
+                color: white*/
+                margin-bottom: 20px;
+                @include md {
+                    font-size: 60px;
+                }
+            }
+            p {
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md {
+                    max-width: 500px;
+                    font-size: 15px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                    text-align: center;
+                }
+            }
+            .ctas {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    width: fit-content;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+                    &.v2 {
+                        background-color: white;
+                        color: black;
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}

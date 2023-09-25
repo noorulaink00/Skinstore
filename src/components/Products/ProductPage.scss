@@ -1,0 +1,11 @@
+
+@import "../../css-config/mixins.scss";
+
+.product_page{
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    @include md{
+        max-width: calc(70% - 20px);
+
+}
+}
